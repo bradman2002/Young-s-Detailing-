@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+      <!--*****************************************************************************
+    Title: Young's Detailing Previous Details
+    Use: To showcase previous details
+    Author: Brady Young
+    School/Term: Southern Illinois University, Fall 2022
+    Developed: Nov 11, 2022
+    Tested: Oct 12, 2022; Passed on Edge, Chrome, and Safari browsers.
+    ******************************************************************************-->
+    <meta charset="utf-8">
+    <title>Young's Detailing Previous Details</title>
+    <link rel="icon" type="image/png" href="Images/Young's%20Detailing-1.png">
+    <meta name="description" content="Young's family owned and operated local bicycle shop rentals">
+    <meta name="keywords" content="bike shop, bikes, bike, bicycle, ebike, mountain bike, bike rental">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Links the external CSS stylesheet-->
+    <link rel="stylesheet" href="externalStylePage.css">
+    <link rel="stylesheet" href="slicknav.css">
+    <link rel="stylesheet" href="slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery.slicknav.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+        });
+    </script>
+</head>
+<body>
+<header>
+    <div class="topHeader">
+        <p class="floatLeft">Detailing is an art, and we practice it every day</p>
+        <p class="floatRight"> Give us a call at <a href="tel:123-555-7890">123-555-7890 </a></p>
+    </div>
+    <div class ="Slick Nav Menu">
+        <nav id="mobile_menu"></nav>
+        <nav id="nav_menu">
+            <ul>
+                <li><a href="index.htm">Home</a></li>
+                <li><a href="Previous.htm" class="current">Previous Details</a></li>
+                <li><a href="Recommended.htm" >Recommended Products</a></li>
+                <li><a href="services.htm" >Services</a></li>
+                <li><a href="contact.htm" >Contact</a></li>
+            </ul>
+            <p class="menuDescription">This page includes my personal favorite products to use, and are great for you as well! These products are all very different
+                products from one another, and they are great to be used in between professional details! These products will help
+                maintain that just detailed look and feel!
+            </p>
+        </nav>
+    </div>
+    <div class="logoCentered">
+        <img src="Images/Young's%20Detailing-1.png" alt="Detailing Logo"   class="Logo">
+    </div>
+
+</header>
+
+<div class="columnPage">
+    <div class="centered smallDisplay">
+        <p>This page includes my personal favorite products to use, and are great for you as well! These products are all very different
+            products from one another, and they are great to be used in between professional details! These products will help
+            maintain that just detailed look and feel!</p>
+    </div>
+    <div class="column2">
+        <h2>Audi Paint Correction</h2>
+        <p>Some text..</p>
+        <img src="Images/Car+Wash+and+Detailing+Exterior+Audi+.jpg" alt="Chadwicks XSling"  class="productsImage">
+    </div>
+    <div class="column2">
+        <h2>2011 Charger Full Detail</h2>
+        <p>Some text..</p>
+        <img src="Images/IMG-0820.jpg" alt="Chadwicks XSling"  class="productsImage">
+    </div>
+    <div class="column2">
+        <h2>Adam's Wheel Cleaner</h2>
+        <p>Some text..</p>
+        <img src="Images/71kaIuAe+iS.jpg" alt="Chadwicks XSling"  class="productsImage">
+    </div>
+    <div class="column2">
+        <h2>2006 Ford Mustang Paint Correction</h2>
+        <p>Some text..</p>
+        <video controls loop>
+            <source src="Videos/IMG-4007.MOV">
+        </video>
+    </div>
+</div>
+
+</body>
+</html>
