@@ -109,7 +109,7 @@ aside {
     flex-basis: 150%;
 }
 
-section{
+.section{
     flex-shrink: 1;
 }
 
@@ -125,6 +125,16 @@ section{
 rollover*/
 
 .productsImage{
+    width: 75%;
+    border-radius: 50px;
+}
+
+.detailsImages{
+    width: 95%;
+    border-radius: 50px;
+}
+
+.detailsImages2{
     width: 75%;
     border-radius: 50px;
 }
@@ -335,7 +345,6 @@ input {
     margin: .5%;
 }
 
-
 .inputLong{
     width: 220px;
 }
@@ -420,6 +429,10 @@ fieldset{
 
     .column3{
         width: 50%;
+    }
+
+    .column2{
+        width: 100%;
     }
 }
 
@@ -708,8 +721,6 @@ screens*/
     .inputLong{
         width: 100%;
     }
-
-
 }
 
 
