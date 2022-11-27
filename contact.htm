@@ -40,6 +40,10 @@ Tested: Oct 25, 2022; Passed on Edge and Chrome browsers.
                 <li><a href="services.htm" >Services</a></li>
                 <li><a href="contact.htm" class="current">Contact</a></li>
             </ul>
+            <p class="menuDescription">This page serves as a way to schedule your appointment with us! Simply enter your
+                required contact information, what type of service you are wanting, what type of car you have, and your
+                desired date, and we will be in contact with you!
+            </p>
         </nav>
     </div>
     <div class="logoCentered">
@@ -49,112 +53,89 @@ Tested: Oct 25, 2022; Passed on Edge and Chrome browsers.
 </header>
 
     <main class="clear">
-        <h1 class="specialCentered">Contact us</h1>
-        <form action="register_account.html" method="get"
-              name="registration_form" id="registration_form">
+        <div class="centered smallDisplay">
+            <p>
+                This page serves as a way to schedule your appointment with us! Simply enter your
+                required contact information, what type of service you are wanting, what type of car you have, and your
+                desired date, and we will be in contact with you!
+            </p>
+        </div>
+        <div class="divCentered centered">
+            <form action="register_account.html" method="get"
+                  name="registration_form" id="registration_form">
 
-            <fieldset>
-                <legend>Contact Form</legend>
+                <fieldset>
+                    <legend>Contact Form</legend>
 
-                <!-- NAME -->
-                <label for="Full_Name">Full Name:</label>
-                <input type="text" name="Full_Name" id="Full_Name" autofocus placeholder="15-25 letters" title="15-25 letters"
-                         minlength="15" maxlength="25" required><br>
+                    <!-- NAME -->
+                    <label for="Full_Name">Full Name:</label><br>
+                    <input class="inputUniform centered" type="text" name="Full_Name" id="Full_Name" autofocus placeholder="Full Name" title="15-25 letters"
+                           required><br>
 
-                <!-- ADDRESS -->
-                <label for="Address">Address:</label>
-                <input type="text" name="Address" id="Address" placeholder="15-50 letters" title="15-50 letters"
-                         minlength="15" maxlength="50" required><br>
+                    <!-- PHONE -->
+                    <label for="Phone">Phone:</label><br>
+                    <input class="inputUniform centered" type="tel" name="Phone" id="Phone" required pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+                           placeholder="Must be 999-999-9999" title="Must be 999-999-9999" minlength="10" maxlength="12" ><br>
 
-                <div class="form-inline">
-                    <!-- CITY -->
-                    <label for="City">City:</label>
-                    <input type="text" name="City" id="City" placeholder="4-25 letters" title="4-25 letters"
-                           minlength="4" maxlength="25" required><br>
+                    <!-- EMAIL -->
+                    <label for="email">Email Address:</label><br>
+                    <input class="inputUniform centered" type="email" name="email" id="email" required
+                           placeholder="Email@Domain" title="Must be a valid email with an '@'"
+                           minlength="10" maxlength="25"><br>
 
-                    <!-- STATE -->
-                    <div class="stateClass">
-                        <label for="size_and_style">State:</label><select id="size_and_style" required>
-                        <option value="">Choose State</option>
-                        <option value="1">Alabama</option>
-                        <option value="2">Alaska</option>
-                        <option value="3">Illinois</option>
-                        <option value="4">New York</option>
-                        <option value="5">California</option>
-                    </select>
-                    </div> <br>
+                    <!-- DATE -->
+                    <label for="Date">Desired Date:</label><br>
+                    <input class="inputUniform centered" type="date" name="Date" id="Date"
+                            title="MM/DD/YYYY" required><br>
 
-                    <!-- ZIP -->
-                    <label for="Zip_Code">Zip Code:</label>
-                    <input  class="inputLong" type="text" name="Zip_Code" id="Zip_Code" required pattern="\d{5}([\-]\d{4})?"
-                           placeholder="Must be 99999 or 99999-9999" title="Must be 99999 or 99999-9999" minlength="5" maxlength="10" ><br>
-                </div>
+                    <!-- INQUIRY TYPE -->
+                    <fieldset>
+                        <legend>Service Type:</legend>
+                        <label>Basic Exterior and Interior Wash<br>
+                            <input type="checkbox" name="Basic Exterior and Interior Wash" value="Basic Exterior and Interior Wash" >
+                        </label><br>
+                        <label>Wash and Wax Combo<br>
+                            <input type="checkbox" name="Wash and Wax Combo" value="Wash and Wax Combo" >
+                        </label><br>
+                        <label>The Works<br>
+                            <input type="checkbox" name="The Works" value="The Works" >
+                        </label><br>
+                        <label>Exterior Wash and Wax<br>
+                            <input type="checkbox" name="Exterior Wash and Wax Combo" value="Exterior Wash and Wax Combo" >
+                        </label><br>
+                        <label>Scratch Removal<br>
+                            <input type="checkbox" name="Scratch Removal" value="Scratch Removal" >
+                        </label><br>
+                        <label>Wheel Deep Clean<br>
+                            <input type="checkbox" name="Wheel Deep Clean" value="Wheel Deep Clean" >
+                        </label><br>
+                        <label>Interior Only Deep Clean<br>
+                            <input type="checkbox" name="Interior Only Deep Clean" value="Interior Only Deep Clean" >
+                        </label><br>
+                        <label>Stain Removal<br>
+                            <input type="checkbox" name="Stain Removal" value="Stain Removal" >
+                        </label><br>
+                        <label>Other (Please comment on your desired service below)<br>
+                            <input type="checkbox" name="Stain Removal" value="Stain Removal" >
+                        </label><br>
+                    </fieldset>
+                    <label for="MakeModel">Vehicle Information:</label> <br>
+                    <textarea class="centered" name="Message" id="MakeModel" maxlength="200"
+                              required="" placeholder="Enter your year, make, and model here"></textarea><br>
 
+                    <label for="Message">Extra Information:</label> <br>
+                    <textarea class="centered" name="Message" id="Message" maxlength="200"
+                              placeholder="Enter your message here"></textarea>
 
-                <!-- PHONE -->
-                <label for="Phone">Phone:</label>
-                <input type="tel" name="Phone" id="Phone" required pattern="\d{3}[\-]\d{3}[\-]\d{4}"
-                       placeholder="Must be 999-999-9999" title="Must be 999-999-9999" minlength="10" maxlength="12" ><br>
-
-                <!-- EMAIL -->
-                <label for="email">Email Address:</label>
-                <input class= "inputLong" type="email" name="email" id="email" required
-                       placeholder="Must be a valid email with an '@'" title="Must be a valid email with an '@'"
-                       minlength="10" maxlength="25"><br>
-
-                <!-- DATE -->
-                <label for="Date">Date:</label>
-                <input type="date" name="Date" id="Date"  pattern="[01]?\d\/[0-3]\d\/\d{4}"
-                       placeholder="MM/DD/YYYY" title="MM/DD/YYYY" required><br>
-
-                <!-- INQUIRY TYPE -->
-                <fieldset class="fieldsetCenter">
-                    <legend>Inquiry Type:</legend>
-                    <label>Sales
-                        <input type="checkbox" name="Sales" value="Sales" >
-                    </label><br>
-                    <label>Service
-                        <input type="checkbox" name="Service" value="Service" >
-                    </label><br>
-                    <label>Rental
-                        <input type="checkbox" name="Rental" value="Rental" >
-                    </label><br>
+                    <fieldset class="fieldsetCenter">
+                        <label>Submit your Contact Information:</label><br>
+                        <input type="submit" id="submit" value="Submit"><br>
+                        <input type="Reset" id="Reset" value="Reset Form"><br>
+                    </fieldset>
                 </fieldset>
+            </form>
+        </div>
 
-                <!-- BIKE TYPE -->
-                <fieldset class="fieldsetCenter">
-                    <legend>Bicycle Type:</legend>
-                    <label>Co-op Cycles CTY 1.1 STEP
-                        <input type="radio" name="Sales Bike" value="Co-op Cycles CTY 1.1 STEP" required>
-                    </label><br>
-                    <label>Liv Alight 2 Disc
-                        <input type="radio" name="Sales Bike" value="Liv Alight 2 Disc" required>
-                    </label><br>
-                    <label>Electra Cruiser 1
-                        <input type="radio" name="Sales Bike" value="Electra Cruiser 1" required>
-                    </label><br>
-                    <label>Schwinn Coston DX Electric
-                        <input type="radio" name="Sales Bike" value="Schwinn Coston DX Electric" required>
-                    </label><br>
-                </fieldset>
-
-                <label for="password">Password:</label>
-                <input class="inputLong" type="password" name="password" id="password" required  pattern="[a-zA-Z0-9]{6, }"
-                       placeholder="Enter a password"  title="Password"><br>
-
-
-                <label for="Message">Extra Information:</label><br>
-                <textarea name="Message" id="Message" minlength="20" maxlength="200"
-                          required="" placeholder="Enter your message here"></textarea>
-
-
-                <fieldset class="fieldsetCenter">
-                    <label>Submit your Contact Information:</label>
-                    <input type="submit" id="submit" value="Submit">
-                    <input type="Reset" id="Reset" value="Reset Form"><br>
-                </fieldset>
-            </fieldset>
-        </form>
     </main>
 </body>
 </html>

@@ -18,11 +18,6 @@ body {
     padding: 0;
 }
 
-/*Sets the font size, the color, and the padding of the headers*/
-header {
-
-}
-
 h2 {
     font-size: 125%;
     margin-bottom: 2%;
@@ -33,7 +28,6 @@ h2 {
 /*Sets the font size, and the padding of the paragraphs*/
 p{
     font-size: 150%;
-
 }
 
 .menuDescription{
@@ -68,6 +62,15 @@ p{
     float: left;
 }
 
+.logoCentered2{
+    margin: auto;
+    text-align: center;
+}
+
+.font150{
+    font-size: 150%;
+}
+
 .headerClassNew{
     font-size: 175%;
 }
@@ -91,15 +94,9 @@ li{
     padding-bottom: 2%;
 }
 
-.headerClass{
-    text-align: center;
-    font-size: 50%;
-}
-
 .centered{
     text-align: center;
 }
-
 
 footer {
     border-top: 1px solid black;
@@ -148,19 +145,7 @@ video{
     border-radius: 50px;
 }
 
-#Image:hover {
-
-}
-
-#ImageBody{
-
-}
-
 /*Includes CSS for the image caption*/
-figure{
-
-}
-
 figcaption{
     width: 500px;
     padding-bottom: 1%;
@@ -207,42 +192,6 @@ for the column pages
 .columnText{
     width: 100%;
 }
-
-.headerColumnClass{
-
-}
-
-.paragraphColumnClass{
-
-}
-
-
-.ImageColumn{
-
-}
-
-
-.bodyColumn {
-
-}
-
-
-.headerColumn {
-
-}
-
-
-.leftColumn {
-
-}
-
-
-.columnFooter{
-    clear: both;
-    border-top: 2px solid black;
-    text-align: center;
-}
-
 
 
 /*******************************************************************************
@@ -295,11 +244,17 @@ The following CSS is for the table on the Services page
 *******************************************************************************/
 
 table {
+    clear: both;
     width: 100%;
     border: 1px solid black;
     border-collapse: collapse;
     margin: auto auto 2%;
 }
+
+.tableClass{
+    padding-top: 20%;
+}
+
 th, td {
     border: 1px solid black;
     padding: .5%;
@@ -337,44 +292,26 @@ The following CSS is for the form on the Contact page
 *******************************************************************************/
 
 form{
-    display: flex;
-    margin-bottom: 5%;
+    margin: auto;
 }
 
 input {
-    margin: .5%;
+    margin: 1.5%;
 }
 
-.inputLong{
-    width: 220px;
-}
-
-fieldset{
+textarea{
     width: 50%;
 }
 
-.fieldsetCenter{
+.inputUniform{
     width: 50%;
-    text-align: center;
 }
 
-.form-inline {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-}
-
-.form-inline label {
-    margin: 1% 10px 1% 0;
-
-}
-
-.form-inline input {
-    padding-right: 1%;
-}
-
-.stateClass{
-    padding-right: 1%;
+.divCentered{
+    width:40%;
+    display:block;
+    margin:auto;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -397,19 +334,6 @@ fieldset{
 }
 
 @media (max-width: 920px) {
-    .form-inline {
-        display: block;
-    }
-
-    fieldset{
-        text-align: center;
-        width: 100%;
-    }
-
-    .fieldsetCenter{
-        margin: auto;
-        width: auto;
-    }
 
     .specialCentered{
         text-align: center;
@@ -433,6 +357,10 @@ fieldset{
 
     .column2{
         width: 100%;
+    }
+
+    .divCentered{
+        width:75%;
     }
 }
 
@@ -479,32 +407,6 @@ Width set to 767px, per examples in the book*/
         border: 2px solid black;
     }
 
-    .headerColumnClass{
-        font-size: xx-large;
-    }
-
-    .paragraphColumnClass{
-        font-size: 125%;
-    }
-
-    /*Sets the width of the images in the columns*/
-    .ImageColumn{
-        width: 75%;
-    }
-
-    /*Sets the parameters of the body in the rental and sales page*/
-    .bodyColumn {
-        width: 97%;
-        margin: auto;
-        background: #afafaf;
-        border: 2px solid black;
-    }
-
-    .columnFooter{
-        clear: both;
-        border-top: 2px solid black;
-    }
-
     aside {
         width: 100%;
         height: auto;
@@ -512,32 +414,9 @@ Width set to 767px, per examples in the book*/
         float: left;
     }
 
-    .leftColumn {
-        width: 100%;
-        height: auto;
-        border-right: none;
-        text-align: center;
-        clear: both;
-        border-bottom: 2px solid black;
-    }
-
-    .headerColumn {
-        font-size: 100%;
-    }
-
     /*Sets the mobile parameters for the image rollover, and the image figcaption*/
     #Image {
         width: 100%;
-    }
-
-    #Image:hover {
-
-    }
-
-    #ImageBody{
-        width: auto;
-        height: auto;
-        padding: 0;
     }
 
     figcaption{
@@ -598,17 +477,9 @@ Width set to 767px, per examples in the book*/
         margin: 1%;
     }
 
-    .inputLong{
-        width: 50%;
-    }
-
     .fieldsetCenter{
         margin: auto;
         width: auto;
-    }
-
-    .form-inline {
-        display: block;
     }
 
     label {
@@ -628,7 +499,6 @@ Width set to 767px, per examples in the book*/
 
     .Logo{
         width: 50%;
-
     }
 
     .logoCentered{
@@ -665,19 +535,17 @@ Width set to 767px, per examples in the book*/
         width: 100%;
     }
 
+    .divCentered{
+        width:100%;
+    }
 
+    .tableClass{
+        padding-top: 0%;
+    }
 }
 
 /*Sets the image and form to be better handled for smaller screens*/
 @media only screen and (max-width: 500px) {
-    #Image {
-        width: 100%;
-    }
-
-    .inputLong{
-        width: 55%;
-    }
-
     .Logo{
         width: 75%;
     }
@@ -690,14 +558,6 @@ Width set to 767px, per examples in the book*/
 /*Sets the image to be better handled for smaller screens, and tweaks various other items, to better fit on smaller
 screens*/
 @media only screen and (max-width: 420px) {
-
-
-    #ImageBody{
-        position: relative;
-        left: -10%;
-        width: 115%;
-    }
-
     figcaption{
         width: 100%;
     }
@@ -706,20 +566,20 @@ screens*/
         width: 75%;
     }
 
-    .inputLong{
-        width: 70%;
+    .divCentered{
+        width:100%;
     }
 }
 
 
 
 @media (max-width: 330px) {
-    input{
-        width: 100%;
+    .inputUniform{
+        width: 75%;
     }
 
-    .inputLong{
-        width: 100%;
+    textarea{
+        width: 75%;
     }
 }
 
