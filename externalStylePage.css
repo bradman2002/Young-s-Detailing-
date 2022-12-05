@@ -6,12 +6,16 @@ School/Term: Southern Illinois University, Fall 2022
 Developed: Nov 11, 2022
 Tested: Oct 12, 2022; Passed on Edge, Chrome, and Safari browsers.
 *******************************************************************************/
-/*Sets the whole page to .5% margin*/
+
+
+/*******************************************************************************
+Includes CSS for basic attributes throughout all pages
+*******************************************************************************/
+
 html{
-    margin: .5%;
+    margin: 1%;
 }
 
-/*Sets the width of the body to 100%, and also sets background to light gray*/
 body {
     background: #afafaf;
     margin: 0;
@@ -25,7 +29,6 @@ h2 {
     clear: both;
 }
 
-/*Sets the font size, and the padding of the paragraphs*/
 p{
     font-size: 150%;
 }
@@ -84,11 +87,10 @@ p{
     padding-top: 2.5%;
 }
 
-footer {
-    border-top: 2px solid black;
+.topPaddingLarge{
+    padding-top: 85%;
 }
 
-/*Sets the font size, and the padding of the list*/
 li{
     font-size: 150%;
     padding-bottom: 2%;
@@ -118,8 +120,8 @@ aside {
     display: none;
 }
 
-/*Sets the border, and position of the one current image, using a class for the current image, and includes the image
-rollover*/
+
+/*Sets the CSS for the various images throughout the pages, including both classes and IDs*/
 
 .productsImage{
     width: 75%;
@@ -138,6 +140,9 @@ rollover*/
 
 video{
     border-radius: 50px;
+    padding-left: 2.5%;
+    width: 50%;
+    height: auto;
 }
 
 #Image {
@@ -145,26 +150,16 @@ video{
     border-radius: 50px;
 }
 
-/*Includes CSS for the image caption*/
 figcaption{
     width: 500px;
     padding-bottom: 1%;
     font-size: 125%;
 }
 
-/*CSS for the video*/
-video{
-    padding-left: 2.5%;
-    width: 50%;
-    height: auto;
-}
-
 
 /*******************************************************************************
-Includes CSS for the column pages below. Note that several special classes had to be made to accommodate
-for the column pages
+Includes CSS for the two column pages below
 *******************************************************************************/
-
 
 .columnPage{
     box-sizing: border-box;
@@ -203,6 +198,7 @@ The following CSS is for the navigation menu
     float: right;
     padding-top: .5%;
     clear: both;
+
 }
 
 /*CSS for the nav menu ul*/
@@ -212,7 +208,8 @@ The following CSS is for the navigation menu
     padding: 1%;
     text-align: center;
     border: 2px solid black;
-
+    border-radius: 25px;
+    background-color: #363636;
 }
 
 /*CSS for the nav menu li*/
@@ -221,6 +218,11 @@ The following CSS is for the navigation menu
     margin: 2.5%;
     padding: .5%;
 }
+
+#nav_menu li:hover{
+    background-color: gray;
+}
+
 
 /*CSS for the nav menu links*/
 #nav_menu a {
@@ -246,9 +248,10 @@ The following CSS is for the table on the Services page
 table {
     clear: both;
     width: 100%;
-    border: 1px solid black;
+    border: 2px solid black;
     border-collapse: collapse;
     margin: auto auto 2%;
+
 }
 
 .tableClass{
@@ -256,7 +259,7 @@ table {
 }
 
 th, td {
-    border: 1px solid black;
+    border: 2px solid black;
     padding: .5%;
     text-align: center;
     font-size: 125%;
@@ -314,23 +317,33 @@ textarea{
     justify-content: center;
 }
 
+/*******************************************************************************
+The following CSS is for smaller screen breakpoints. Many different breakpoints were included, to allow the
+site to fit better on all resolutions. The most drastic changes are made at the 767px breakpoint, as that was the
+recommended size from the book
+*******************************************************************************/
+
 @media only screen and (max-width: 1200px) {
     .Logo{
-        width: 25%;
+        width: 20%;
     }
 
     aside {
-        flex-basis: 250%;
+        flex-basis: 500%;
     }
 
     #nav_menu{
-        width: 70%;
-
+        width: 80%;
     }
 
     figcaption{
         width: 375px;
     }
+
+    #Image{
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 920px) {
@@ -344,11 +357,12 @@ textarea{
     }
 
     .floatRight{
-        float: none;
+        float: right;
+        width: 35%;
     }
 
     .floatLeft{
-        float: none;
+        float: left;
     }
 
     .column3{
@@ -362,14 +376,26 @@ textarea{
     .divCentered{
         width:75%;
     }
+
+    #Image{
+        width: 100%;
+    }
+
+    .displayFlex {
+        display: block;
+    }
+
+    .Logo{
+        width: 25%;
+    }
+
+    #nav_menu{
+        width: 75%;
+    }
 }
 
 
-/*Sets CSS for mobile screen display, including the nav menu, tweaks of other various items, and changes the table on
-the services page so that it displays better on mobile devices, and screens less than 767 pixels.
-Width set to 767px, per examples in the book*/
 @media only screen and (max-width: 767px) {
-    /* #nav_menu is the original menu */
     #nav_menu {
         display: none;
     }
@@ -402,7 +428,7 @@ Width set to 767px, per examples in the book*/
     .footerClass{
         clear: both;
         display: block;
-        width: 85%;
+        width: 95%;
         margin: 2%;
         border: 2px solid black;
     }
@@ -414,7 +440,6 @@ Width set to 767px, per examples in the book*/
         float: left;
     }
 
-    /*Sets the mobile parameters for the image rollover, and the image figcaption*/
     #Image {
         width: 100%;
     }
@@ -425,13 +450,11 @@ Width set to 767px, per examples in the book*/
         font-size: 125%;
     }
 
-    /*Sets the mobile parameters for the video*/
     video{
         padding-left: 0;
         width: 95%;
     }
 
-    /*Mobile parameters for the table on the sales page*/
     th, td {
         display: block;
         font-size: 150%;
@@ -540,11 +563,11 @@ Width set to 767px, per examples in the book*/
     }
 
     .tableClass{
-        padding-top: 0%;
+        padding-top: 0;
     }
 }
 
-/*Sets the image and form to be better handled for smaller screens*/
+
 @media only screen and (max-width: 500px) {
     .Logo{
         width: 75%;
@@ -555,8 +578,7 @@ Width set to 767px, per examples in the book*/
     }
 }
 
-/*Sets the image to be better handled for smaller screens, and tweaks various other items, to better fit on smaller
-screens*/
+
 @media only screen and (max-width: 420px) {
     figcaption{
         width: 100%;
