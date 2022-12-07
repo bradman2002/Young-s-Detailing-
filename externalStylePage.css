@@ -12,12 +12,12 @@ Tested: Oct 12, 2022; Passed on Edge, Chrome, and Safari browsers.
 Includes CSS for basic attributes throughout all pages
 *******************************************************************************/
 
-html{
+.pageMargin{
     margin: 1%;
 }
 
 body {
-    background: #afafaf;
+    background: #c7c7c7;
     margin: 0;
     padding: 0;
 }
@@ -101,7 +101,18 @@ li{
 }
 
 footer {
-    border-top: 1px solid black;
+    border-top: 2px solid black;
+
+}
+
+.floatLeftFooter{
+    float: left;
+
+}
+
+.floatRightFooter{
+    float: right;
+
 }
 
 aside {
@@ -363,6 +374,15 @@ recommended size from the book
 
     .floatLeft{
         float: left;
+    }
+
+    .floatRightFooter{
+        float: none;
+        width: 35%;
+    }
+
+    .floatLeftFooter{
+        float: none;
     }
 
     .column3{
