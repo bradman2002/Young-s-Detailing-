@@ -4,7 +4,7 @@ Use: External CSS page for use with the detailing shop website
 Author: Braden Young
 School/Term: Southern Illinois University, Fall 2022
 Developed: Nov 11, 2022
-Tested: Oct 12, 2022; Passed on Edge, Chrome, and Safari browsers.
+Tested: Dec 12, 2022; Passed on Edge, Chrome, and Safari browsers.
 *******************************************************************************/
 
 
@@ -63,6 +63,7 @@ p{
 .Logo{
     width: 15%;
     float: left;
+    margin-left: 1%;
 }
 
 .logoCentered2{
@@ -116,7 +117,7 @@ footer {
 }
 
 aside {
-    flex-basis: 150%;
+    flex-basis: 200%;
 }
 
 .section{
@@ -132,7 +133,7 @@ aside {
 }
 
 
-/*Sets the CSS for the various images throughout the pages, including both classes and IDs*/
+/*Sets the CSS for the various images and the video throughout the pages, including both classes and IDs*/
 
 .productsImage{
     width: 75%;
@@ -169,7 +170,7 @@ figcaption{
 
 
 /*******************************************************************************
-Includes CSS for the two column pages below
+Includes CSS for the column pages below
 *******************************************************************************/
 
 .columnPage{
@@ -199,13 +200,12 @@ Includes CSS for the two column pages below
     width: 100%;
 }
 
-
 /*******************************************************************************
 The following CSS is for the navigation menu
 *******************************************************************************/
 
 #nav_menu{
-    width: 65%;
+    width: 75%;
     float: right;
     padding-top: .5%;
     clear: both;
@@ -262,7 +262,6 @@ table {
     border: 2px solid black;
     border-collapse: collapse;
     margin: auto auto 2%;
-
 }
 
 .tableClass{
@@ -344,7 +343,7 @@ recommended size from the book
     }
 
     #nav_menu{
-        width: 80%;
+        width: 75%;
     }
 
     figcaption{
@@ -354,7 +353,6 @@ recommended size from the book
     #Image{
         width: 100%;
     }
-
 }
 
 @media (max-width: 920px) {
@@ -410,7 +408,7 @@ recommended size from the book
     }
 
     #nav_menu{
-        width: 75%;
+        width: 70%;
     }
 }
 
@@ -542,6 +540,7 @@ recommended size from the book
 
     .Logo{
         width: 50%;
+        margin-left: 0;
     }
 
     .logoCentered{
